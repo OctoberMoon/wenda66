@@ -28,7 +28,10 @@
             }, function () {
                 var index = $( this ).parents('tr').attr('id');
                 $( this ).html( '+' );
-                $( 'tr[pid=' + index + ']' ).hide();
+                $.each(index,function (key,val){
+                    $( 'tr[pid=' + val + ']' ).hide();
+                });
+//                $( 'tr[pid=' + index + ']' ).hide();
             } );
 
             $( '.del' ).click( function () {
@@ -39,7 +42,7 @@
 </head>
 <body>
 <table class="table">
-    <tr pid='0'>
+    <tr pid=''>
         <th align='left'>展开</th>
         <th align='left'>ID</th>
         <th align='left'>分类名称</th>

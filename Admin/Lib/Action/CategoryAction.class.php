@@ -27,14 +27,14 @@ class CategoryAction extends CommonAction
     /**
      *  添加子分类视图
      */
-    Public function addChild () {
+    public function addChild () {
         $this->cate = M('category')->find($this->_get('pid', 'intval'));
         $this->display();
     }
     /**
      *  添加分类表单处理
      */
-    Public function addCate () {
+    public function addCate () {
         if (M('category')->data($_POST)->add()) {
             $this->success('添加成功', 'index');
         } else {
@@ -45,7 +45,7 @@ class CategoryAction extends CommonAction
     /**
      *  修改分类视图
      */
-    Public function edit () {
+    public function edit () {
         $this->cate = M('category')->find($this->_get('id', 'intval'));
         $this->display();
     }
@@ -53,7 +53,7 @@ class CategoryAction extends CommonAction
     /**
      *  修改分类操作
      */
-    Public function editCate () {
+    public function editCate () {
         if (M('category')->save($_POST)) {
             $this->success('修改成功', 'index');
         } else {
@@ -63,7 +63,7 @@ class CategoryAction extends CommonAction
     /**
      *  删除分类
      */
-    Public function del () {
+    public function del () {
         $id = $this->_get('id', 'intval');
         $db = M('category');
         $cateid = $db->field(array('id', 'pid'))->select();

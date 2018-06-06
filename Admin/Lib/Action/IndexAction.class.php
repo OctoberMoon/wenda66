@@ -17,7 +17,7 @@ class IndexAction extends CommonAction
     /**
      *  用户信息
      */
-    Public function copy () {
+    public function copy () {
         $time = date('Y-m-d H:i:s');
         $ip = get_client_ip();
         $info = <<<str
@@ -32,7 +32,7 @@ str;
     /**
      *  退出登录
      */
-    Public function loginOut () {
+    public function loginOut () {
         session_unset();
         session_destroy();
         $this->redirect('Login/index');

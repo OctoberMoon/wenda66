@@ -1,9 +1,9 @@
 <div id='top-fixed'>
 	<div id='top-bar'>
 		<ul class="top-bar-left fl">
-			<li><a href="http://www.houdunwang.com" target='_blank'>后盾网</a></li>
-			<li><a href="http://bbs.houdunwang.com" target='_blank'>后盾论坛</a></li>
-			<li><a href="http://study.houdunwang.com" target='_blank'>后盾学习社区</a></li>
+			<li><a href="http://www.houdunwang.com" target='_blank'>网</a></li>
+			<li><a href="http://bbs.houdunwang.com" target='_blank'>论坛</a></li>
+			<li><a href="http://study.houdunwang.com" target='_blank'>学习社区</a></li>
 		</ul>
 		<ul class='top-bar-right fr'>
 			<if condition='!isset($_SESSION["uid"]) OR !isset($_SESSION["username"])'>
@@ -47,14 +47,14 @@
 </div>
 
 <if condition="!isset($_SESSION['uid']) OR !isset($_SESSION['username'])">
-	<script type="text/javascript" src='__PUBLIC__/Js/validate.js'></script>
+	<script type="text/javascript" src='./Public/Js/validate.js'></script>
 	<script type="text/javascript">
 		var CONTROL = "__APP__/Common/";
 	</script>
 	<!----------注册框---------->
 	<div id='register' class='hidden'>
 		<div class='reg-title'>
-			<p>欢迎注册后盾问答</p>
+			<p>欢迎注册问答</p>
 			<a href="" title='关闭' class='close-window'></a>
 		</div>
 		<div id='reg-wrap'>
@@ -107,7 +107,7 @@
 	<!----------登录框---------->	
 	<div id='login' class='hidden'>
 		<div class='login-title'>
-			<p>欢迎您登录后盾网</p>
+			<p>欢迎您登录网</p>
 			<a href="" title='关闭' class='close-window'></a>
 		</div>
 		<div class='login-form'>

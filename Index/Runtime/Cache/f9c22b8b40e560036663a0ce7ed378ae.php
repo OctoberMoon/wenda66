@@ -6,19 +6,19 @@
 	<title>wenda66</title>
 	<!--<meta name="keywords" content="<?php echo (C("keywords")); ?>"/>-->
 	<!--<meta name="description" content="<?php echo (C("description")); ?>"/>-->
-	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
-	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
-	<script type="text/javascript" src='__PUBLIC__/Js/top-bar.js'></script>
-	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
-	<script type="text/javascript" src='__PUBLIC__/Js/index.js'></script>
+	<link rel="stylesheet" href="./Public/Css/common.css" />
+	<script type="text/javascript" src='./Public/Js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript" src='./Public/Js/top-bar.js'></script>
+<link rel="stylesheet" href="./Public/Css/index.css" />
+<script type="text/javascript" src='./Public/Js/index.js'></script>
 </head>
 <body>
-	<div id='top-fixed'>
+<div id='top-fixed'>
 	<div id='top-bar'>
 		<ul class="top-bar-left fl">
-			<li><a href="http://www.houdunwang.com" target='_blank'>后盾网</a></li>
-			<li><a href="http://bbs.houdunwang.com" target='_blank'>后盾论坛</a></li>
-			<li><a href="http://study.houdunwang.com" target='_blank'>后盾学习社区</a></li>
+			<li><a href="http://www.houdunwang.com" target='_blank'>网</a></li>
+			<li><a href="http://bbs.houdunwang.com" target='_blank'>论坛</a></li>
+			<li><a href="http://study.houdunwang.com" target='_blank'>学习社区</a></li>
 		</ul>
 		<ul class='top-bar-right fr'>
 			<?php if(!isset($_SESSION["uid"]) OR !isset($_SESSION["username"])): ?><li><a href="" class='login'>登录</a></li>
@@ -59,14 +59,14 @@
 	<p class='total'>累计提问：10240000</p>
 </div>
 
-<?php if(!isset($_SESSION['uid']) OR !isset($_SESSION['username'])): ?><script type="text/javascript" src='__PUBLIC__/Js/validate.js'></script>
+<?php if(!isset($_SESSION['uid']) OR !isset($_SESSION['username'])): ?><script type="text/javascript" src='./Public/Js/validate.js'></script>
 	<script type="text/javascript">
 		var CONTROL = "__APP__/Common/";
 	</script>
 	<!----------注册框---------->
 	<div id='register' class='hidden'>
 		<div class='reg-title'>
-			<p>欢迎注册后盾问答</p>
+			<p>欢迎注册问答</p>
 			<a href="" title='关闭' class='close-window'></a>
 		</div>
 		<div id='reg-wrap'>
@@ -119,7 +119,7 @@
 	<!----------登录框---------->	
 	<div id='login' class='hidden'>
 		<div class='login-title'>
-			<p>欢迎您登录后盾网</p>
+			<p>欢迎您登录网</p>
 			<a href="" title='关闭' class='close-window'></a>
 		</div>
 		<div class='login-form'>
@@ -151,11 +151,11 @@
 <!--背景遮罩--><div id='background' class='hidden'></div>
 
 <!--------------------内容主体-------------------->
-	<div class='main'>
-		<div id='left'>
-			<p class='left-title'>所有问题分类</p>
-			<ul class='left-list'>
-				<?php if(is_array($cate)): foreach($cate as $key=>$v): ?><li class='list-l1'>
+<div class='main'>
+	<div id='left'>
+		<p class='left-title'>所有问题分类</p>
+		<ul class='left-list'>
+			<?php if(is_array($cate)): foreach($cate as $key=>$v): ?><li class='list-l1'>
 					<div class='list-l1-wrap'>
 						<h4><a href="<?php echo U('List/index', array('id' => $v['id']));?>"><?php echo ($v["name"]); ?></a></h4>
 						<ul class='list-l2'>
@@ -168,56 +168,56 @@
 						</ul>
 					</div>
 				</li><?php endforeach; endif; ?>
+		</ul>
+	</div>
+
+	<div id='center'>
+		<div id='animate'>
+			<div class='imgs-wrap'>
+				<ul>
+					<li>
+						<a href=""><img src="./Public/Images/animate1.png" width='558' height='190'/></a>
+					</li>
+					<li>
+						<a href=""><img src="./Public/Images/animate2.png" width='558' height='190'/></a>
+					</li>
+					<li>
+						<a href=""><img src="./Public/Images/animate3.png" width='558' height='190'/></a>
+					</li>
+				</ul>
+			</div>
+			<ul class='ani-btn'>
+				<li class='ani-btn-cur'>网<i></i></li>
+				<li>网论坛<i></i></li>
+				<li style='border:none'>网学习社区<i></i></li>
 			</ul>
 		</div>
 
-		<div id='center'>
-			<div id='animate'>
-				<div class='imgs-wrap'>
-					<ul>
-						<li>
-							<a href=""><img src="__PUBLIC__/Images/animate1.png" width='558' height='190'/></a>
-						</li>
-						<li>
-							<a href=""><img src="__PUBLIC__/Images/animate2.png" width='558' height='190'/></a>
-						</li>
-						<li>
-							<a href=""><img src="__PUBLIC__/Images/animate3.png" width='558' height='190'/></a>
-						</li>
-					</ul>
-				</div>
-				<ul class='ani-btn'>
-					<li class='ani-btn-cur'>后盾网<i></i></li>
-					<li>后盾网论坛<i></i></li>
-					<li style='border:none'>后盾网学习社区<i></i></li>
-				</ul>
-			</div>
+		<dl class='answer-list'>
+			<dt>
+				<span class='wait-as'>待解决问题</span>
+				<a href=''>更多>></a>
+			</dt>
+			<?php if(is_array($wait)): foreach($wait as $key=>$v): ?><dd>
+					<a href="<?php echo U('Show/index', array('id' => $v['id']));?>"><?php echo ($v["content"]); ?></a>
+					<span><?php echo ($v["answer"]); ?>回答</span>
+				</dd><?php endforeach; endif; ?>
+		</dl>
 
-			<dl class='answer-list'>
-				<dt>
-					<span class='wait-as'>待解决问题</span>
-					<a href=''>更多>></a>
-				</dt>
-				<?php if(is_array($wait)): foreach($wait as $key=>$v): ?><dd>
-						<a href="<?php echo U('Show/index', array('id' => $v['id']));?>"><?php echo ($v["content"]); ?></a>
-						<span><?php echo ($v["answer"]); ?>回答</span>
-					</dd><?php endforeach; endif; ?>
-			</dl>
+		<dl class='answer-list'>
+			<dt>
+				<span class='reward-as'>高分悬赏问题</span>
+				<a href=''>更多>></a>
+			</dt>
+			<?php if(is_array($rewardAsk)): foreach($rewardAsk as $key=>$v): ?><dd>
+					<a href="<?php echo U('Show/index', array('id' => $v['id']));?>"><b><?php echo ($v["reward"]); ?></b><?php echo ($v["content"]); ?></a>
+					<span><?php echo ($v["answer"]); ?>回答</span>
+				</dd><?php endforeach; endif; ?>
+		</dl>
 
-			<dl class='answer-list'>
-				<dt>
-					<span class='reward-as'>高分悬赏问题</span>
-					<a href=''>更多>></a>
-				</dt>
-				<?php if(is_array($rewardAsk)): foreach($rewardAsk as $key=>$v): ?><dd>
-						<a href="<?php echo U('Show/index', array('id' => $v['id']));?>"><b><?php echo ($v["reward"]); ?></b><?php echo ($v["content"]); ?></a>
-						<span><?php echo ($v["answer"]); ?>回答</span>
-					</dd><?php endforeach; endif; ?>
-			</dl>
+	</div>
 
-		</div>
-
-		<div id='right'>
+	<div id='right'>
 	<?php if(!isset($_SESSION["uid"]) OR !isset($_SESSION["username"])): ?><div class='r-login'>
 			<span class='login'><i></i>&nbsp;登录</span>
 			<span class='register'><i></i>&nbsp;注册</span>
@@ -256,13 +256,13 @@
 
 	<div class='clear'></div>
 	<div class='star'>
-		<p class='title'>后盾问答之星</p>
+		<p class='title'>问答之星</p>
 		<span class='star-name'>本日回答问题最多的人</span>
 		<?php
  $todayTime = strtotime(date('y-m-d')); $sql = 'SELECT `u`.`id` AS `id`, `username`, `face`, `exp`, `answer`, `u`.`adopt` AS `adopt` FROM `hd_answer` `a` LEFT JOIN `hd_user` `u` ON `a`.`uid` = `u`.`id` WHERE `time` > ' . $todayTime . ' GROUP BY `username` ORDER BY `answer` DESC LIMIT 1'; $answerOnThisDay = M()->query($sql); $starUser = $answerOnThisDay[0]; $starUser['level'] = exp_to_level($starUser['exp']); ?>
 			<div class='star-info'>
 				<div>
-					<a href="<?php echo U('Member/index', array('id' => $starUser['id']));?>" class='star-face'><img src="<?php if($starUser["face"]): ?>__ROOT__/Uploads/Face/<?php echo ($starUser["face"]); else: ?>__PUBLIC__/Images/noface.gif<?php endif; ?>" width='48px' height='48px'/></a>
+					<a href="<?php echo U('Member/index', array('id' => $starUser['id']));?>" class='star-face'><img src="<?php if($starUser["face"]): ?>__ROOT__/Uploads/Face/<?php echo ($starUser["face"]); else: ?>./Public/Images/noface.gif<?php endif; ?>" width='48px' height='48px'/></a>
 					<ul>
 						<li><a href="<?php echo U('Member/index', array('id' => $starUser['id']));?>"><?php echo ($starUser["username"]); ?></a></li>
 						<li><i class='level lv<?php echo ($starUser["level"]); ?>' title='Level <?php echo ($starUser["level"]); ?>'></i></li>
@@ -277,7 +277,7 @@
 		<?php 'SELECT `id`, `username`, `answer`, `face`, `answer`, `adopt` FROM `hd_user` GROUP BY `username` ORDER BY `answer` DESC LIMIT 1'; $result = M()->query($sql); $result = $result[0]; $result['level'] = exp_to_level($result['exp']); ?>
 		<div class='star-info'>
 			<div>
-				<a href="<?php echo U('Member/index', array('id' => $result['id']));?>" class='star-face'><img src="<?php if($result["face"]): ?>__ROOT__/Uploads/Face/<?php echo ($result["face"]); else: ?>__PUBLIC__/Images/noface.gif<?php endif; ?>" width='48px' height='48px'/></a>
+				<a href="<?php echo U('Member/index', array('id' => $result['id']));?>" class='star-face'><img src="<?php if($result["face"]): ?>__ROOT__/Uploads/Face/<?php echo ($result["face"]); else: ?>./Public/Images/noface.gif<?php endif; ?>" width='48px' height='48px'/></a>
 				<ul>
 					<li><a href="<?php echo U('Member/index', array('id' => $result['id']));?>"><?php echo ($result["username"]); ?></a></li>
 					<li><i class='level lv<?php echo ($result["level"]); ?>' title='Level <?php echo ($result["level"]); ?>'></i></li>
@@ -293,7 +293,7 @@
 
 	<?php $sql = 'SELECT `id`, `username`, `answer` FROM `hd_user` GROUP BY `username` ORDER BY `answer` DESC LIMIT 10'; $result = M()->query($sql); ?>
 	<div class='star-list'>
-		<p class='title'>后盾问答助人光荣榜</p>
+		<p class='title'>问答助人光荣榜</p>
 		<div>
 			<ul class='ul-title'>
 				<li>用户名</li>
@@ -308,20 +308,20 @@
 		</div>
 	</div>
 </div>
-	</div>
+</div>
 <!--------------------内容主体结束-------------------->
-	<div class='clear'></div>
+<div class='clear'></div>
 	<div id='bottom'>
 		<p><?php echo (C("copy")); ?></p>
 		<p><?php echo (C("record")); ?></p>
 	</div>
-	<!--[if IE 6]>
-	<script type="text/javascript" src="__PUBLIC__/Js/iepng.js"></script>
-	<script type="text/javascript">
-		DD_belatedPNG.fix('.logo','background');
-		DD_belatedPNG.fix('.nav-sel a','background');
-		DD_belatedPNG.fix('.ask-cate i','background');
-	</script>
-	<![endif]-->
+<!--[if IE 6]>
+    <script type="text/javascript" src="./Public/Js/iepng.js"></script>
+    <script type="text/javascript">
+    	DD_belatedPNG.fix('.logo','background');
+        DD_belatedPNG.fix('.nav-sel a','background');
+        DD_belatedPNG.fix('.ask-cate i','background');
+    </script>
+<![endif]-->
 </body>
 </html>

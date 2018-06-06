@@ -1,5 +1,5 @@
 <include file='Common:header'/>
-	<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+	<link rel="stylesheet" href="./Public/Css/show.css" />
 	<script type="text/javascript">
 		window.onload = function () {
 			$( '#anw-sub' ).click( function () {
@@ -52,7 +52,7 @@
 							<p class='ans-cons'>{$bingo.content}</p>
 							<dl>
 								<dt>
-									<a href="{:U('Member/index', array('id' => $bingo['uid']))}"><img src="<if condition='$bingo["face"]'>__ROOT__/Uploads/Face/{$bingo.face}<else/>__PUBLIC__/Images/noface.gif</if>" width='48' height='48'/></a>
+									<a href="{:U('Member/index', array('id' => $bingo['uid']))}"><img src="<if condition='$bingo["face"]'>__ROOT__/Uploads/Face/{$bingo.face}<else/>./Public/Images/noface.gif</if>" width='48' height='48'/></a>
 								</dt>
 								<dd>
 									<a href="{:U('Member/index', array('id' => $bingo['uid']))}">{$bingo.username}</a>
@@ -72,7 +72,7 @@
 							<li>
 								<div class='face'>
 									<a href="{:U('Member/index', array('id' => $v['id']))}">
-										<img src="<if condition='$v["face"]'>__ROOT__/Uploads/Face/{$v.face}<else/>__PUBLIC__/Images/noface.gif</if>" width='48' height='48'/>{$v.username}
+										<img src="<if condition='$v["face"]'>__ROOT__/Uploads/Face/{$v.face}<else/>./Public/Images/noface.gif</if>" width='48' height='48'/>{$v.username}
 									</a>
 								</div>
 								<div class='cons <if condition="!$key % 2">fen<else/>blue</if>'>

@@ -39,7 +39,7 @@
 
 	<div class='clear'></div>
 	<div class='star'>
-		<p class='title'>后盾问答之星</p>
+		<p class='title'>问答之星</p>
 		<span class='star-name'>本日回答问题最多的人</span>
 		<?php
 			$todayTime = strtotime(date('y-m-d'));
@@ -50,7 +50,7 @@
 		?>
 			<div class='star-info'>
 				<div>
-					<a href="{:U('Member/index', array('id' => $starUser['id']))}" class='star-face'><img src="<if condition='$starUser["face"]'>__ROOT__/Uploads/Face/{$starUser.face}<else/>__PUBLIC__/Images/noface.gif</if>" width='48px' height='48px'/></a>
+					<a href="{:U('Member/index', array('id' => $starUser['id']))}" class='star-face'><img src="<if condition='$starUser["face"]'>__ROOT__/Uploads/Face/{$starUser.face}<else/>./Public/Images/noface.gif</if>" width='48px' height='48px'/></a>
 					<ul>
 						<li><a href="{:U('Member/index', array('id' => $starUser['id']))}">{$starUser.username}</a></li>
 						<li><i class='level lv{$starUser.level}' title='Level {$starUser.level}'></i></li>
@@ -70,7 +70,7 @@
 		</php>
 		<div class='star-info'>
 			<div>
-				<a href="{:U('Member/index', array('id' => $result['id']))}" class='star-face'><img src="<if condition='$result["face"]'>__ROOT__/Uploads/Face/{$result.face}<else/>__PUBLIC__/Images/noface.gif</if>" width='48px' height='48px'/></a>
+				<a href="{:U('Member/index', array('id' => $result['id']))}" class='star-face'><img src="<if condition='$result["face"]'>__ROOT__/Uploads/Face/{$result.face}<else/>./Public/Images/noface.gif</if>" width='48px' height='48px'/></a>
 				<ul>
 					<li><a href="{:U('Member/index', array('id' => $result['id']))}">{$result.username}</a></li>
 					<li><i class='level lv{$result.level}' title='Level {$result.level}'></i></li>
@@ -89,7 +89,7 @@
 		$result = M()->query($sql);
 	</php>
 	<div class='star-list'>
-		<p class='title'>后盾问答助人光荣榜</p>
+		<p class='title'>问答助人光荣榜</p>
 		<div>
 			<ul class='ul-title'>
 				<li>用户名</li>

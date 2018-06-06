@@ -5,7 +5,8 @@
  * @since: 2018/6/6 11:52
  */
 
-Class CommonAction extends Action {
+Class CommonAction extends Action
+{
 
 
 }

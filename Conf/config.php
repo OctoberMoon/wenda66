@@ -1,15 +1,47 @@
 <?php
-/**
- * @desc Created by PhpStorm.
- * @author: 莫名私下里
- * @since: 2018/6/6 13:27
- */
-
-return array(
-    //数据库连接
-    'DB_HOST' => '127.0.0.1',
-    'DB_USER' => 'root',
-    'DB_PWD' => '',
-    'DB_NAME' => 'wenda66',
-    'DB_PREFIX' => 'hd_',
+return array (
+  'DB_HOST' => '127.0.0.1',
+  'DB_USER' => 'root',
+  'DB_PWD' => '',
+  'DB_NAME' => 'wenda66',
+  'DB_PREFIX' => 'hd_',
+  'TOKEN_ON' => false,
+  'WEBNAME' => '问答66',
+  'KEYWORDS' => '问答 - 你问大家答',
+  'DISCRIPTION' => '后盾网互动问答社区',
+  'COPY' => 'Copyright © 2013 houdunwang.Com All Rights Reserved 问答网',
+  'RECORD' => '京ICP备10027771号-1',
+  'REGIS_ON' => '1',
+  'WEB_STATE' => '1',
+  'ANSWER' => '1',
+  'ADOPT' => '2',
+  'DEL_ANSWER' => '2',
+  'DEL_ASK' => '2',
+  'DEL_ADOPT_ASK' => '3',
+  'DEL_ADOPT_ANSWER' => '3',
+  'LV_LOGIN' => '1',
+  'LV_ASK' => '2',
+  'LV_ANSWER' => '3',
+  'LV_ADOPT' => '5',
+  'LV1' => '400',
+  'LV2' => '800',
+  'LV3' => '1600',
+  'LV4' => '4000',
+  'LV5' => '800',
+  'LV6' => '1400',
+  'LV7' => '2100',
+  'LV8' => '2500',
+  'LV9' => '3300',
+  'LV10' => '4000',
+  'LV11' => '600',
+  'LV12' => '1000',
+  'LV13' => '160',
+  'LV14' => '23000',
+  'LV15' => '2800',
+  'LV16' => '3400',
+  'LV17' => '4000',
+  'LV18' => '4800',
+  'LV19' => '5600',
+  'LV20' => '7000',
 );
+?>

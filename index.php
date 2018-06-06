@@ -5,7 +5,7 @@
  * @since: 2018/6/6 10:34
  */
 
-    define('APP_DEBUG',true);
-    define('APP_NAME','Index');
-    define('APP_PATH','./Index/');
+    define('APP_DEBUG', true);
+    define('APP_NAME', 'Index');
+    define('APP_PATH', './Index/');
     require './ThinkPHP/ThinkPHP.php';
